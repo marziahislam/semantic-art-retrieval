@@ -1,0 +1,23 @@
+# Local Python environments and generated files
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.env
+
+# Downloads and large experiment artifacts
+*.crdownload
+*.part
+*.zip
+*.tar
+*.tar.gz
+*.pdf
+SemArt/
+data/
+cache/
+checkpoints/
+artifacts/
+slurm-*.out
+
+# Keep small experiment summaries in results/ under version control.
