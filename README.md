@@ -148,3 +148,33 @@ gallery IDs, query fields, truncation policy, exclusions, and metrics. Report
 dataset counts from the actual downloaded files rather than copying inconsistent
 approximate counts from the proposal. An initial baseline on the official split
 should pass basic checks before building artist-disjoint experiments.
+
+## Rerunning training versus regenerating the report
+
+Do not use **Run All** just to regenerate figures. The notebook contains ICE
+training cells and a separate local report section.
+
+| Goal | What to run |
+| --- | --- |
+| Regenerate figures/tables from the completed run | Local kernel; run only **Milestone report artifacts**. Set `RUN_NAME` explicitly. No training or checkpoint loading occurs. |
+| Start a new adaptation experiment | ICE kernel; `RESUME_FROM = None`; run the fine-tuning section from its configuration cell. This starts from pretrained CLIP weights in a new directory. |
+| Resume interrupted training | ICE kernel; set `RESUME_FROM` to the run's `last_training.pt`; rerun the fine-tuning section from the configuration cell. |
+| Re-evaluate a finished run | Resume from `last_training.pt` with the original total epoch budget. No epochs run if the saved epoch already reaches that budget; the selected checkpoint is restored and evaluated. |
+| Continue past three completed epochs | Resume and increase the total `config["epochs"]` budget, for example to 5. Other settings and dataset contents must match. |
+
+Resumption starts at the next epoch boundary; an interrupted partial epoch is
+repeated. Checkpoints include optimizer and random states. New checkpoint files
+embed the best projection state to recover consistently if saving the separate
+best file was interrupted. Older checkpoint pairs remain supported when consistent.
+This does not guarantee identical GPU results across hardware/library changes.
+
+For the downloaded run, report outputs are in `results/projection_90b55b2d/`.
+`methodology.md` drafts the completed method/conditions; `report_checklist.md`
+maps artifacts to the milestone sections and identifies remaining writing.
+`source_evidence/` retains small raw JSON/CSV evidence for regeneration; model
+weights and optimizer checkpoints remain in ignored `artifacts/`. If the artifact
+folder is absent, report generation can use `source_evidence/` plus the original
+local SemArt files. Back up checkpoints separately from Git.
+
+The report section overwrites generated files for the explicitly selected run.
+For a new training run, download its folder and change `RUN_NAME` before plotting.

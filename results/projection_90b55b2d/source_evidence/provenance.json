@@ -1,0 +1,26 @@
+{
+  "python": "3.11.18 (main, Oct 26 2026, 18:19:35) [GCC 14.3.0]",
+  "packages": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "numpy": "2.4.6",
+    "pandas": "3.1.1",
+    "Pillow": "13.0.0",
+    "clip": "1.0"
+  },
+  "clip_direct_url": {
+    "url": "https://github.com/openai/CLIP.git",
+    "vcs_info": {
+      "commit_id": "d05afc436d78f1c48dc0dbf8e5980a9d471f35f6",
+      "vcs": "git"
+    }
+  },
+  "image_preprocess": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    <function _convert_image_to_rgb at 0x15524139a160>\n    ToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "dataset_audit": {
+    "train_pairs": 19244,
+    "val_pairs": 1069,
+    "shared_description_values": 78,
+    "val_rows_with_shared_description": 11,
+    "shared_author_values": 547
+  }
+}

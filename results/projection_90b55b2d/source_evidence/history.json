@@ -1,0 +1,48 @@
+[
+  {
+    "epoch": 0,
+    "train_loss": null,
+    "num_queries": 1069,
+    "gallery_size": 1069,
+    "recall@1": 0.17118802666664124,
+    "recall@5": 0.3835360109806061,
+    "recall@10": 0.4920486509799957,
+    "mrr": 0.2787337005138397
+  },
+  {
+    "epoch": 1,
+    "train_loss": 1.1606699834368477,
+    "examples_seen": 19244,
+    "skipped_examples": 0,
+    "num_queries": 1069,
+    "gallery_size": 1069,
+    "recall@1": 0.2245088815689087,
+    "recall@5": 0.4518241286277771,
+    "recall@10": 0.5668849349021912,
+    "mrr": 0.3362891972064972
+  },
+  {
+    "epoch": 2,
+    "train_loss": 0.9951112570174888,
+    "examples_seen": 19244,
+    "skipped_examples": 0,
+    "num_queries": 1069,
+    "gallery_size": 1069,
+    "recall@1": 0.22263798117637634,
+    "recall@5": 0.46679139137268066,
+    "recall@10": 0.5762394666671753,
+    "mrr": 0.34052959084510803
+  },
+  {
+    "epoch": 3,
+    "train_loss": 0.9192311424917651,
+    "examples_seen": 19244,
+    "skipped_examples": 0,
+    "num_queries": 1069,
+    "gallery_size": 1069,
+    "recall@1": 0.22357343137264252,
+    "recall@5": 0.4789522886276245,
+    "recall@10": 0.5809167623519897,
+    "mrr": 0.3459016680717468
+  }
+]

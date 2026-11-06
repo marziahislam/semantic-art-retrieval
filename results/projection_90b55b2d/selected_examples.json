@@ -1,0 +1,8 @@
+{
+  "rule": "Median rank gain within each category; ties ordered by query ID. Improved prefers newly correct top-1 queries.",
+  "queries": {
+    "improved": "43477-mancini2.jpg",
+    "worsened": "03767-034madon.jpg",
+    "unchanged_failure": "19658-campovac.jpg"
+  }
+}

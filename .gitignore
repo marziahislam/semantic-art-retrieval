@@ -1,10 +1,16 @@
 # Local Python environments and generated files
 .venv/
+venv/
+.conda/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
 .DS_Store
 .env
+.env.*
+!.env.example
 
 # Downloads and large experiment artifacts
 *.crdownload
@@ -12,12 +18,21 @@ __pycache__/
 *.zip
 *.tar
 *.tar.gz
-*.pdf
 SemArt/
 data/
 cache/
 checkpoints/
 artifacts/
 slurm-*.out
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.npy
+*.npz
+*.arrow
+*.parquet
+*.tmp
 
-# Keep small experiment summaries in results/ under version control.
+# Keep report source, figures (including PDFs), tables, and small source evidence
+# under results/ in version control. Back up artifacts/ separately from Git.

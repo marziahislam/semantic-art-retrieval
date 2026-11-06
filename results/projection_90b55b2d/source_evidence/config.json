@@ -1,0 +1,16 @@
+{
+  "checkpoint": "ViT-B/32",
+  "batch_size": 32,
+  "epochs": 3,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.01,
+  "seed": 42,
+  "truncate": true,
+  "adaptation": "projection_only",
+  "smoke_test": false,
+  "query_fields": [
+    "DESCRIPTION"
+  ],
+  "dtype": "float32",
+  "selection_metric": "mrr"
+}

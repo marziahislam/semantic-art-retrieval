@@ -1,0 +1,12 @@
+{
+  "queries": 1069,
+  "improved_rank": 620,
+  "unchanged_rank": 214,
+  "worsened_rank": 235,
+  "median_rank_baseline": 11.0,
+  "median_rank_adapted": 6.0,
+  "recall@1_change_percentage_points": 5.238540692235735,
+  "recall@5_change_percentage_points": 9.541627689429372,
+  "recall@10_change_percentage_points": 8.886810102899911,
+  "mrr_change": 0.06716794142635109
+}

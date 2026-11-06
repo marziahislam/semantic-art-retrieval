@@ -1,0 +1,43 @@
+{
+  "config": {
+    "checkpoint": "ViT-B/32",
+    "batch_size": 32,
+    "epochs": 3,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.01,
+    "seed": 42,
+    "truncate": true,
+    "adaptation": "projection_only",
+    "smoke_test": false,
+    "query_fields": [
+      "DESCRIPTION"
+    ],
+    "dtype": "float32",
+    "selection_metric": "mrr"
+  },
+  "best_epoch": 3,
+  "baseline_metrics": {
+    "num_queries": 1069,
+    "gallery_size": 1069,
+    "recall@1": 0.17118802666664124,
+    "recall@5": 0.3835360109806061,
+    "recall@10": 0.4920486509799957,
+    "mrr": 0.2787337005138397
+  },
+  "best_metrics": {
+    "num_queries": 1069,
+    "gallery_size": 1069,
+    "recall@1": 0.22357343137264252,
+    "recall@5": 0.4789522886276245,
+    "recall@10": 0.5809167623519897,
+    "mrr": 0.3459016680717468
+  },
+  "checkpoint_reproduced": true,
+  "update_checks": {
+    "projection_max_abs_changes": {
+      "text_projection": 1.0013580322265625e-05,
+      "visual.proj": 1.0013580322265625e-05
+    },
+    "all_frozen_parameters_unchanged": true
+  }
+}

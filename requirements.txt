@@ -2,6 +2,7 @@ numpy
 pandas
 Pillow
 matplotlib
+Jinja2
 tqdm
 jupyterlab
 ipykernel

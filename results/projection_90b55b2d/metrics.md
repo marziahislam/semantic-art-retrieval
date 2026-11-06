@@ -1,0 +1,4 @@
+| Method | Trainable parameters | R@1 (%) | R@5 (%) | R@10 (%) | MRR |
+| --- | --- | --- | --- | --- | --- |
+| Frozen CLIP | 0 | 17.12 | 38.35 | 49.20 | 0.2787 |
+| Projection-only CLIP | 655360 | 22.36 | 47.90 | 58.09 | 0.3459 |
